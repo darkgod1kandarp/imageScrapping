@@ -21,9 +21,7 @@ def folder_create(images):
 # DOWNLOAD ALL IMAGES FROM THAT URL
 def download_images(images, folder_name):
 
-	# initial count is zero
- 
-    val  = 315
+    val  = len([entry for entry in os.listdir(folder_name) if os.path.isfile(os.path.join(folder_name, entry))])
 	# print total images found in URL
     print(f"Total {len(images)} Image Found!")
     image_set  = {}
